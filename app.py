@@ -5,7 +5,7 @@ import webbrowser
 import random
 import time
 
-# Constants
+
 sound_threshold = 0.1
 duration_threshold = 0.1
 sample_rate = 44100
@@ -37,7 +37,7 @@ def open_applications():
     subprocess.Popen(['open', '-a', 'Visual Studio Code'])
     subprocess.Popen(['open', '-a', 'Spotify'])
 
-# Main function
+
 if __name__ == "__main__":
     print("Listening for two consecutive finger snaps...")
     snap_count = 0
