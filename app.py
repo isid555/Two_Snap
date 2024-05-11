@@ -5,16 +5,16 @@ import webbrowser
 import random
 import time
 
-# Constants
+
 sound_threshold = 0.1
 duration_threshold = 0.1
 sample_rate = 44100
 duration = 2
 
 lofi_links = [
-    'https://www.youtube.com/live/oBwrlePfchs?si=kOm0QaXGQTFsLgIL',
-    'https://youtu.be/rtTI1rh9U5M?si=2a86LO8c-4lXdJKN',
-    'https://youtu.be/EVF_AuhJgLg?si=_TibxzBQWaiWc30U'
+    'https://youtu.be/Lng9YbFNoxE?list=RDLng9YbFNoxE&t=188',
+    'https://youtu.be/zLcrEO-eIOQ?list=RDLng9YbFNoxE&t=196',
+    'https://youtu.be/_AGlvdNlS_0?t=14'
 ]
 def detect_finger_snap():
     recording = sd.rec(int(duration * sample_rate), samplerate=sample_rate, channels=1, dtype='float32')
@@ -29,7 +29,7 @@ def detect_finger_snap():
 def open_applications():
     webbrowser.open_new_tab('https://www.youtube.com')
     time.sleep(2)
-    search_query = 'lofi hip hop beats to relax/study to'
+    search_query = 'ragangal+16+song+'
     webbrowser.open_new_tab(f'https://www.youtube.com/results?search_query={search_query}')
     time.sleep(2)
     random_link = random.choice(lofi_links)
@@ -37,7 +37,7 @@ def open_applications():
     subprocess.Popen(['open', '-a', 'Visual Studio Code'])
     subprocess.Popen(['open', '-a', 'Spotify'])
 
-# Main function
+
 if __name__ == "__main__":
     print("Listening for two consecutive finger snaps...")
     snap_count = 0
